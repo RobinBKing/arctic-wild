@@ -1,3 +1,14 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of  the site/application.
 // ----------------------------------------------------------------------------
+#hero {
+  height: 100%;
+  background: url(../img/hero-slide1.jpg) top center no-repeat;
+  background-size: cover;
+}
+
+.heading-sep {
+  margin: 25px auto;
+  background: #ffffff;
+  width: 250px;
+}

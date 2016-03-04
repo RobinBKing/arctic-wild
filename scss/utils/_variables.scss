@@ -2,11 +2,11 @@
 // This file contains all application-wide Sass variables.
 // -----------------------------------------------------------------------------
 // Typography
-$base-font-family: $redressed;
+$base-font-family: 'Open Sans', sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
-$base-font-size: 1em;
+$base-font-size: 18px;
 
 // Line height
 $base-line-height: 1.5;
@@ -25,14 +25,15 @@ $large-screen: em(860) !default;
 $blue: #1565c0;
 $blue-gray: #324766;
 $ligh-blue-gray: #7F99BE;
-$dark-gray: #333;
+$dark-brown: #343433;
 $medium-gray: #999;
 $light-gray: #ddd;
 $dark-green: #20392B;
+$kacki: #646461;
 
 // Font Colors
-$base-font-color: darken($blue-gray, 20%);
-$base-header-font-color: lighten($blue-gray, 30%);
+$base-font-color: $kacki;
+$base-header-font-color: $kacki;
 $base-font-color-hover: white;
 $action-color: $blue;
 
@@ -42,9 +43,8 @@ $base-border-color: gainsboro;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
-// $base-background-color: transparentize($base-font-color, 0.8);
-$base-background-color: desaturate(darken($action-color, 20%), 30%);
-$secondary-background-color: desaturate(lighten($base-border-color, 75%), 30%);
+$base-background-color: $dark-brown;
+$base-header-background-color: $dark-brown;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

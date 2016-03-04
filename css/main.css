@@ -421,18 +421,18 @@ label {
 input,
 select {
   display: block;
-  font-family: "Redressed", "Times New Roman", sans-serif;
-  font-size: 1em; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px; }
 
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], input:not([type]), textarea,
 select[multiple] {
-  background-color: #1c3653;
+  background-color: #343433;
   border: 1px solid gainsboro;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
-  font-family: "Redressed", "Times New Roman", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
   margin-bottom: 0.75em;
   padding: 0.5em;
   transition: border-color 150ms ease;
@@ -447,7 +447,7 @@ select[multiple] {
     outline: none; }
   input[type="color"]:disabled, input[type="date"]:disabled, input[type="datetime"]:disabled, input[type="datetime-local"]:disabled, input[type="email"]:disabled, input[type="month"]:disabled, input[type="number"]:disabled, input[type="password"]:disabled, input[type="search"]:disabled, input[type="tel"]:disabled, input[type="text"]:disabled, input[type="time"]:disabled, input[type="url"]:disabled, input[type="week"]:disabled, input:not([type]):disabled, textarea:disabled,
   select[multiple]:disabled {
-    background-color: #1b334f;
+    background-color: #313130;
     cursor: not-allowed; }
     input[type="color"]:disabled:hover, input[type="date"]:disabled:hover, input[type="datetime"]:disabled:hover, input[type="datetime-local"]:disabled:hover, input[type="email"]:disabled:hover, input[type="month"]:disabled:hover, input[type="number"]:disabled:hover, input[type="password"]:disabled:hover, input[type="search"]:disabled:hover, input[type="tel"]:disabled:hover, input[type="text"]:disabled:hover, input[type="time"]:disabled:hover, input[type="url"]:disabled:hover, input[type="week"]:disabled:hover, input:not([type]):disabled:hover, textarea:disabled:hover,
     select[multiple]:disabled:hover {
@@ -526,10 +526,14 @@ html {
   box-sizing: inherit; }
 
 body {
-  color: #101722;
-  font-family: "Redressed", "Times New Roman", sans-serif;
-  font-size: 1em;
-  line-height: 1.5; }
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #343433;
+  font-family: "Open Sans", sans-serif;
+  color: #646461;
+  line-height: 1.5;
+  font-size: 18px; }
 
 html, body {
   height: auto; }
@@ -540,8 +544,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Redressed", "Times New Roman", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
   line-height: 1.2;
   margin: 0 0 0.75em; }
 
@@ -567,6 +571,16 @@ picture {
   margin: 0;
   max-width: 100%; }
 
+#hero {
+  height: 100%;
+  background: url(../img/hero-slide1.jpg) top center no-repeat;
+  background-size: cover; }
+
+.heading-sep {
+  margin: 25px auto;
+  background: #ffffff;
+  width: 250px; }
+
 button, input[type="button"], input[type="reset"], input[type="submit"] {
   appearance: none;
   background-color: #1565c0;
@@ -575,8 +589,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-family: "Redressed", "Times New Roman", sans-serif;
-  font-size: 1em;
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   font-weight: 600;
   line-height: 1;
