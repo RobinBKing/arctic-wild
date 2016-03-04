@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 // Typography
 $base-font-family: 'Open Sans', sans-serif;
-$heading-font-family: $base-font-family;
+$heading-font-family: 'Fjalla One', sans-serif;;
 
 // Font Sizes
 $base-font-size: 18px;
@@ -30,21 +30,23 @@ $medium-gray: #999;
 $light-gray: #ddd;
 $dark-green: #20392B;
 $kacki: #646461;
+$orange: #dc7725;
+$white: #ffffff;
 
 // Font Colors
 $base-font-color: $kacki;
-$base-header-font-color: $kacki;
-$base-font-color-hover: white;
+$base-header-font-color: $white;
+$base-font-color-hover: $orange;
 $action-color: $blue;
 
 // Border
 // $base-border-color: lighten($blue-gray, 30%);
-$base-border-color: gainsboro;
+$base-border-color: black;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
 $base-background-color: $dark-brown;
-$base-header-background-color: $dark-brown;
+$base-header-background-color: black;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);

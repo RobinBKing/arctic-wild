@@ -1,9 +1,9 @@
 @import
-  'utils/variables';
+  'variables';
   //handled with bourbon
 @import
-  'utils/functions',
-  'utils/mixins';
+  'functions',
+  'mixins';
 
 //for testing only
-// @import 'utils/test';
+@import 'test';
