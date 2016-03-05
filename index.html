@@ -2,7 +2,7 @@
 <html>
   <head>
     <link href="css/main.css" rel="stylesheet" type="text/css">
-    <!--  -->
+    <link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
     <title>Arctic Wild</title>
@@ -11,11 +11,15 @@
     <div class="wrapper">
       <header>
           <div id="hero">
-            <div class="navigation">
+            <div class="navigation-main">
               <div class="navigation-wrapper">
-                <div id="logo">
-                  <a href="javascript:void(0)"><img src="img/logo.svg" alt="" /></a>
-                  <a href="javascript:void(0)"><img src="img/logo-text.svg" alt="" /></a>
+                <div class="logo">
+                  <div class="logo-img">
+                    <a href="javascript:void(0)"><img src="img/logo.svg" alt="" /></a>
+                  </div>
+                  <div class="logo-text">
+                    <a href="javascript:void(0)"><img src="img/logo-text.svg" alt="" /></a>
+                  </div>
                 </div>
                 <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu"><img src="img/nav-icon.png" alt="" /></a>
                    <!-- <a  class="navigation-menu-button" id="js-mobile-menu" href="javascript:void(0)"><span></span><span></span><span></span></a> -->
@@ -64,94 +68,98 @@
                   </ul>
                 </nav>
               </div>
-              <div id="hero-text-hold">
+            </div>
+            <div id="hero-text-hold">
         				<div class="hero-text">
-        					<img id="alaska" src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-alaska.png" alt="alaska">
-        					<h2>
-        						<span>ENJOY THE SOLITUDE &amp; SOLACE OF</span><br>ALASKA
-    								<!-- <a id="alaska-text" href="javascript:void(0)"><img src="img/logo-text.svg" alt="" /></a> -->
-                  </h2>
-                  <div class="heading-sep"></div>
+                  <div class="alaska">
+        					       <img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-alaska.png" alt="alaska">
+                </div>
+                <p>ENJOY THE SOLITUDE &amp; SOLACE OF</p>
+        			  <h1>ARCTIC WILD</h1>
+                  <!-- <div class="alaska-text">
+                    <img src="img/logo-text.svg" alt="" />
+                  </div> -->
         				</div><!-- end .hero-text -->
-        			</div><!-- end #hero-text-hold -->
-              <div id="hero-scrolldown">
-          		<a href="javascript:AW.scrollTo('#trip-grid');" class="viewmore-down">
-                <span class="round-3px trans-bg">EXPLORE BELOW</span>
-              </a>
+        		</div><!-- end #hero-text-hold -->
+            <div class="heading-sep">
+              <a href="#">-</a>
+            </div>
+            <div id="hero-scrolldown">
+          		<!-- <a href="javascript:AW.scrollTo('#trip-grid');" class="viewmore-down"><span class="round-3px trans-bg">EXPLORE BELOW</span></a> -->
   					</div>
-          </div>
         </div>
-      </header>
-      <div id="navigation-category">
-				<div class="container">
-					<nav>
-						<ul>
-							<li class="nopad-left"><a href="http://arcticwild.com/" class="nopad-left homelink">Home</a></li>
-							<li><a href="http://arcticwild.com/trips/rafting/">Rafting</a></li>
-							<li><a href="http://arcticwild.com/trips/backpacking/">Backpacking</a></li>
-							<li><a href="http://arcticwild.com/trips/canoe/">Canoe</a></li>
-							<li id="more-categories">
-								<a href="">More</a>
-								<ul class="subnav">
-									<li><a href="http://arcticwild.com/trips/base-camp/">Base Camp</a></li>
-									<li><a href="http://arcticwild.com/trips/photography/">Photography</a></li>
-									<li><a href="http://arcticwild.com/trips/custom/">Custom</a></li>
-									<li><a href="http://arcticwild.com/trips/">All Trips</a></li>
+        <div id="navigation-category" class="">
+						<div class="navigation-wrapper">
+							<nav>
+								<ul>
+									<li class="nopad-left"><a href="http://arcticwild.com/" class="nopad-left homelink">Home</a></li>
+									<li><a href="http://arcticwild.com/trips/rafting/">Rafting</a></li>
+									<li><a href="http://arcticwild.com/trips/backpacking/">Backpacking</a></li>
+									<li><a href="http://arcticwild.com/trips/canoe/">Canoe</a></li>
+									<li id="more-categories">
+										<a href="">More</a>
+										<ul class="subnav">
+											<li><a href="http://arcticwild.com/trips/base-camp/">Base Camp</a></li>
+											<li><a href="http://arcticwild.com/trips/photography/">Photography</a></li>
+											<li><a href="http://arcticwild.com/trips/custom/">Custom</a></li>
+											<li><a href="http://arcticwild.com/trips/">All Trips</a></li>
+										</ul>
+									</li>
 								</ul>
-							</li>
-						</ul>
-					</nav>
-				  <div id="search-btn"><a href="javascript:;">Search</a></div>
-			  </div><!-- end .container -->
-			</div>
+							</nav>
+							<div id="search-btn"><a href="javascript:void(0)">Search</a></div>
+						</div><!-- end .navigation-wrapper -->
+					</div>
+      </header>
       <div class="main">
         <section id="trip-grid">
   				<div class="trip-row">
-
-  					<div class="trip-hf set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg" style="background-image: url(&quot;http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg&quot;);">
-
-  						<a href="http://arcticwild.com/trips/rafting/" class="trip-link"></a>
-  						<div class="trip-icon"><a href="http://arcticwild.com/trips/rafting/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-raft.svg" alt="raft"></a></div>
-  						<div class="trip-text"><div class="trip-sep"></div>RAFTING TRIPS</div>
-
+  					<div id="rafting" class="trip-hf set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg" >
+  					  <a href="http://arcticwild.com/trips/rafting/" class="trip-link"></a>
+  						<div class="trip-icon">
+                <a href="http://arcticwild.com/trips/rafting/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-raft.svg" alt="raft"></a>
+              </div>
+  						<div class="trip-text">
+                <div class="trip-sep"></div>
+                RAFTING TRIPS
+              </div>
   					</div><!-- end .trip-hf -->
-
-  					<div class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg" style="background-image: url(&quot;http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg&quot;);">
-
+  					<div id="basecamp" class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg">
   						<a href="http://arcticwild.com/trips/base-camp/" class="trip-link"></a>
-  						<div class="trip-icon"><a href="http://arcticwild.com/trips/base-camp/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-basecamp.svg" alt="basecamp"></a></div>
-  						<div class="trip-text"><div class="trip-sep"></div>BASE CAMP TRIPS</div>
-
+  						<div class="trip-icon">
+                <a href="http://arcticwild.com/trips/base-camp/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-basecamp.svg" alt="basecamp"></a>
+                </div>
+  						  <div class="trip-text">
+                  <div class="trip-sep"></div>
+                  BASE CAMP TRIPS
+                </div>
+  					  </div><!-- end .trip-hf -->
+  					  <div id="backpacking" class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg">
+  						  <a href="http://arcticwild.com/trips/backpacking/" class="trip-link"></a>
+  						 <div class="trip-icon">
+                 <a href="http://arcticwild.com/trips/backpacking/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-backpacking.svg" alt="backpacking"></a></div>
+  						 <div class="trip-text">
+                 <div class="trip-sep"></div>
+                 BACKPACKING TRIPS
+               </div>
   					</div><!-- end .trip-hf -->
-
-  					<div class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg" style="background-image: url(&quot;http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg&quot;);">
-
-  						<a href="http://arcticwild.com/trips/backpacking/" class="trip-link"></a>
-  						<div class="trip-icon"><a href="http://arcticwild.com/trips/backpacking/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-backpacking.svg" alt="backpacking"></a></div>
-  						<div class="trip-text"><div class="trip-sep"></div>BACKPACKING TRIPS</div>
-
-  					</div><!-- end .trip-hf -->
-
   				</div><!-- end .trip-row -->
   				<div class="trip-row">
-
-  					<div class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg" style="background-image: url(&quot;http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg&quot;);">
-
+  					<div id="canoe" class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg">
   						<a href="http://arcticwild.com/trips/canoe/" class="trip-link"></a>
-  						<div class="trip-icon"><a href="http://arcticwild.com/trips/canoe/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-canoe.svg" alt="canoe"></a></div>
-  						<div class="trip-text"><div class="trip-sep"></div>CANOE TRIPS</div>
-
+  						<div class="trip-icon">
+                <a href="http://arcticwild.com/trips/canoe/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-canoe.svg" alt="canoe"></a>
+              </div>
+  						<div class="trip-text">
+                <div class="trip-sep"></div>CANOE TRIPS
+              </div>
   					</div><!-- end .trip-hf -->
-
-  					<div class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg" style="background-image: url(&quot;http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg&quot;);">
-
+  					<div id="photo" class="trip-qt set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg">
   						<a href="http://arcticwild.com/trips/photography/" class="trip-link"></a>
   						<div class="trip-icon"><a href="http://arcticwild.com/trips/photography/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-photography.svg" alt="photography"></a></div>
   						<div class="trip-text"><div class="trip-sep"></div>PHOTOGRAPHY TRIPS</div>
-
   					</div><!-- end .trip-hf -->
-
-  					<div class="trip-hf set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg" style="background-image: url(&quot;http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg&quot;);">
+  					<div class="trip-hf set-background" data-background="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg">
   						<a href="http://arcticwild.com/custom/" class="trip-link"></a>
   						<div class="trip-icon"><a href="http://arcticwild.com/trips/custom/" class="icon-trip"><img src="http://arcticwild.com/wp-content/themes/arcticwild/assets/img/icon-custom.svg" alt="custom"></a></div>
   						<div class="trip-text"><div class="trip-sep"></div>CUSTOM TRIPS</div>

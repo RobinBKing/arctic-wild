@@ -2,51 +2,69 @@
 // This file contains all styles related to the header of  the site/application.
 // ----------------------------------------------------------------------------
 .wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  // display: flex;
+  // justify-content: flex-start;
+  //  align-content:  center;
+  // flex-direction: column;
 }
 header {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: column;
 }
-
-.navigation {
-  // $navigation-padding: 1em;
-  $navigation-background: $dark-gray;
-  $navigation-color: transparentize(white, 0.3);
-  $navigation-color-hover: $orange;
-  $navigation-height: 60px;
-  $navigation-nav-button-background: $action-color;
-  $navigation-submenu-padding: 1em;
-  $navigation-submenu-width: 12em;
-  $horizontal-bar-mode: $large-screen;
-
+#hero {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  // background-color: $navigation-background;
-  // border-bottom: 1px solid darken($navigation-background, 10);
-  // min-height: $navigation-height;
+  justify-content: center;
   width: 100%;
-  // z-index: 999;
+  height: 100vh;
+  background: url(../img/hero-slide1.jpg) top center no-repeat;
+  background-size: cover;
 
-  .navigation-wrapper {
+  .navigation-main {
+    $navigation-background: $dark-gray;
+    $navigation-color: $base-header-font-color;
+    $navigation-color-hover: $orange;
+    $navigation-height: 60px;
+    $navigation-nav-button-background: $action-color;
+    $navigation-submenu-padding: 1em;
+    $navigation-submenu-width: 12em;
+    $horizontal-bar-mode: $large-screen;
+
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+    // justify-content: center;
+    // flex-direction: column;
+    width: 100%;
 
-    @include clearfix;
-    @include outer-container;
-    // position: relative;
-    // z-index: 9999;
-    #logo a {
-      width: 50%;
-      height: auto;
+    .navigation-wrapper {
+      display: flex;
+      // justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+      // align-content: flex-start;
+
+      @include clearfix;
+      @include outer-container;
+      // position: relative;
+      // z-index: 9999;
+      .logo {
+        display: flex;
+        flex-direction: row;
+        width: 240px;
+        height: 50px;
+        // position: absolute;
+        // left: 0px;
+        // top: 75px;
+        // z-index: 100;
+        .logo-img {
+          max-width: 8vh;
+        }
+        .logo-text {
+          width: 25vh;
+          height: auto;
+        }
+      }
     }
-  }
-
 
 // Mobile view
   .navigation-menu-button {
@@ -63,31 +81,25 @@ header {
       color: $navigation-color-hover;
     }
   }
-  //
-  // #js-mobile-menu span {
-  //     display: block;
-  //     height: 2px;
-  //     background: $base-header-font-color;
-  //     margin: 5px 0px;
-  // }
 
   // Nav menu
   nav {
-    float: none;
-    min-height: $navigation-height;
-    z-index: 9999999;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
 
     @include media ($horizontal-bar-mode) {
-      float: left;
+      justify-content: flex-start;
+      // float: left;
     }
     ul {
-      clear: both;
+      // clear: both;
+      @include clearfix;
       display: none;
       margin: 0 auto;
       overflow: visible;
       padding: 0;
       width: 100%;
-      z-index: 9999;
 
       &.show {
         display: block;
@@ -107,7 +119,6 @@ header {
         padding-right: 0.8em;
         text-align: right;
         width: 100%;
-        // z-index: 9999;
 
         @include media ($horizontal-bar-mode) {
           background: transparent;
@@ -121,6 +132,8 @@ header {
           color: $navigation-color;
           display: inline-block;
           text-decoration: none;
+          font-size:  13px;
+          font-family: $heading-font-family;
 
           @include media ($horizontal-bar-mode) {
             padding-right: 1em;
@@ -136,7 +149,7 @@ header {
   }
 
   .active-nav-item a {
-    border-bottom: 1px solid transparentize(white, 0.5);
+    border-bottom: 1px solid transparentize($navigation-color, 0.5);
     padding-bottom: 3px;
   }
 
@@ -253,53 +266,48 @@ header {
   }
 }
 
-#hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  height: 100vh;
-  background: url(../img/hero-slide1.jpg) top center no-repeat;
-  background-size: cover;
   .hero-text {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    img#alaska {
+    color: $base-header-font-color;
+    text-align: center;
+    text-transform: uppercase;
+
+    .alaska {
       width: 80px;
       height: auto;
       margin: 0 auto;
+      padding: 0;
     }
-    h2 {
-      margin: 0px;
-      padding: 0px;
-      font-size: 120px;
-      line-height: 120px;
+
+    p {
+      font-size: 18px;
+      line-height: 30px;
+      letter-spacing: 6px;
+      font-family: $heading-font-family;
+    }
+    h1 {
+      font-size: 105px;
+      line-height: 105px;
       font-family: 'freight-big-pro', serif;
       font-weight: bold;
-      color: $base-header-font-color;
-      // font-family: $heading-font-family;
       text-align: center;
       text-transform: uppercase;
-      span {
-        font-size: 20px;
-        line-height: 30px;
-        letter-spacing: 6px;
-      }
-      a#alaska-text {
-        padding: 0;
-        margin: 0;
-        width: 50%;
-        height: auto;
-      }
+    }
+    .alaska-text {
+      padding: 0;
+      margin: 0;
+      width: 85%;
+      height: auto;
     }
   }
-
   .heading-sep {
-    margin: 25px auto;
-    background: $white;
-    width: 250px;
+      margin: 0 auto;
+      padding: 0;
+      background: $white;
+      width: 250px;
   }
 }
 
