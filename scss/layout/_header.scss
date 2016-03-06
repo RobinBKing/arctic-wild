@@ -1,70 +1,50 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of  the site/application.
 // ----------------------------------------------------------------------------
-.wrapper {
-  // display: flex;
-  // justify-content: flex-start;
-  //  align-content:  center;
-  // flex-direction: column;
-}
-header {
-  // display: flex;
-  // justify-content: center;
-  // flex-direction: column;
-}
 #hero {
+  $navigation-height: 60px;
+  $navigation-nav-button-background: $action-color;
+  $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 12em;
+  $horizontal-bar-mode: $large-screen;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;;
+  align-items: flex-start;
+ flex-wrap: nowrap;
   width: 100%;
   height: 100vh;
   background: url(../img/hero-slide1.jpg) top center no-repeat;
   background-size: cover;
 
   .navigation-main {
-    $navigation-background: $dark-gray;
-    $navigation-color: $base-header-font-color;
-    $navigation-color-hover: $orange;
-    $navigation-height: 60px;
-    $navigation-nav-button-background: $action-color;
-    $navigation-submenu-padding: 1em;
-    $navigation-submenu-width: 12em;
-    $horizontal-bar-mode: $large-screen;
-
     display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-    width: 100%;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    margin: 2em;
+    @include clearfix;
+    @include outer-container;
+  }
 
-    .navigation-wrapper {
-      display: flex;
-      // justify-content: space-between;
-      flex-direction: row;
-      align-items: center;
-      // align-content: flex-start;
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 240px;
+    height: 50px;
 
-      @include clearfix;
-      @include outer-container;
-      // position: relative;
-      // z-index: 9999;
-      .logo {
-        display: flex;
-        flex-direction: row;
-        width: 240px;
-        height: 50px;
-        // position: absolute;
-        // left: 0px;
-        // top: 75px;
-        // z-index: 100;
-        .logo-img {
-          max-width: 8vh;
-        }
-        .logo-text {
-          width: 25vh;
-          height: auto;
-        }
-      }
+    .logo-img {
+      max-width: 8vh;
     }
+
+    .logo-text {
+      width: 25vh;
+      height: auto;
+    }
+  }
 
 // Mobile view
   .navigation-menu-button {
@@ -73,121 +53,88 @@ header {
     display: block;
 
     @include media ($horizontal-bar-mode) {
-      display: none;
-    }
+        display: none;
+      }
 
     &:focus,
     &:hover {
-      color: $navigation-color-hover;
+      color: $base-font-color-hover;
     }
   }
 
-  // Nav menu
+// Nav menu
   nav {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
     padding: 0;
 
     @include media ($horizontal-bar-mode) {
-      justify-content: flex-start;
-      // float: left;
+      justify-content: flex-end;
     }
-    ul {
-      // clear: both;
-      @include clearfix;
-      display: none;
-      margin: 0 auto;
-      overflow: visible;
-      padding: 0;
-      width: 100%;
+  }
 
-      &.show {
-        display: block;
-      }
+  ul.navigation-menu {
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+
+    &.show {
+      display: block;
+    }
+
+    @include media ($horizontal-bar-mode) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+// The nav items
+  ul li.nav-link {
+    display: inline-block;
+    line-height: $navigation-height;
+    overflow: hidden;
+    padding-right: 0.8em;
+    text-align: right;
+    width: 100%;
+
+    @include media ($horizontal-bar-mode) {
+      background: transparent;
+      display: inline;
+      line-height: $navigation-height;
+      text-decoration: none;
+      width: auto;
+    }
+
+    a {
+      color: $base-header-font-color;
+      display: inline-block;
+      text-decoration: none;
+      font-size:  13px;
+      font-family: $heading-font-family;
 
       @include media ($horizontal-bar-mode) {
-        display: inline;
-        margin: 0;
-        padding: 0;
+        padding-right: 1em;
       }
-      // The nav items
-      li.nav-link {
-        // background: $navigation-background;
-        display: inline-block;
-        line-height: $navigation-height;
-        overflow: hidden;
-        padding-right: 0.8em;
-        text-align: right;
-        width: 100%;
 
-        @include media ($horizontal-bar-mode) {
-          background: transparent;
-          display: inline;
-          line-height: $navigation-height;
-          text-decoration: none;
-          width: auto;
-        }
-
-        a {
-          color: $navigation-color;
-          display: inline-block;
-          text-decoration: none;
-          font-size:  13px;
-          font-family: $heading-font-family;
-
-          @include media ($horizontal-bar-mode) {
-            padding-right: 1em;
-          }
-
-          &:focus,
-          &:hover {
-            color: $navigation-color-hover;
-          }
-        }
+      &:focus,
+      &:hover {
+        color: $base-font-color-hover;
       }
     }
   }
 
   .active-nav-item a {
-    border-bottom: 1px solid transparentize($navigation-color, 0.5);
+    border-bottom: 1px solid transparentize($base-header-font-color, 0.5);
     padding-bottom: 3px;
   }
 
   // Sub menus
-  li.more {
-    overflow: visible;
-    padding-right: 0;
-
-    a {
-      padding-right: 0.8em;
-    }
-
-    > a {
-      padding-right: 1.6em;
-      position: relative;
-
-      @include media($horizontal-bar-mode) {
-        margin-right: $navigation-submenu-padding;
-      }
-
-      &:after {
-        content: '›';
-        font-size: 1.2em;
-        position: absolute;
-        right: $navigation-submenu-padding / 2;
-      }
-    }
-
-    &:focus > .submenu,
-    &:hover > .submenu {
-      display: block;
-    }
-
-    @include media($horizontal-bar-mode) {
-      padding-right: 0.8em;
-      position: relative;
-    }
-    &.nav-link {
+    li.more.nav-link {
       padding-right: 0;
 
       @include media($horizontal-bar-mode) {
@@ -209,9 +156,45 @@ header {
       > a:after {
         @include position(absolute, auto -0.4em auto auto);
         content: '\25BE';
-        color: $navigation-color;
+        color: $base-header-font-color;
       }
     }
+
+    li.more {
+      overflow: visible;
+      padding-right: 0;
+
+      a {
+        padding-right: 0.8em;
+      }
+
+      > a {
+        padding-right: 1.6em;
+        position: relative;
+
+        @include media($horizontal-bar-mode) {
+          margin-right: $navigation-submenu-padding;
+        }
+
+        &:after {
+          content: '›';
+          font-size: 1.2em;
+          position: absolute;
+          right: $navigation-submenu-padding / 2;
+        }
+      }
+
+      &:focus > .submenu,
+      &:hover > .submenu {
+        display: block;
+      }
+
+      @include media($horizontal-bar-mode) {
+        padding-right: 0.8em;
+        position: relative;
+      }
+    }
+
     ul.submenu {
       display: none;
       padding-left: 0;
@@ -249,13 +232,13 @@ header {
         }
 
         a {
-          background-color: darken($navigation-background, 3%);
+          background-color: darken($base-background-color, 3%);
           display: inline-block;
           text-align: right;
           width: 100%;
 
           @include media($horizontal-bar-mode) {
-            background-color: $navigation-background;
+            background-color: $base-background-color;
             padding-left: $navigation-submenu-padding;
             text-align: left;
             width: $navigation-submenu-width;
@@ -263,87 +246,73 @@ header {
         }
       }
     }
-  }
-}
 
-  .hero-text {
+  #hero-text-hold {
+      display: flex;
+      width: 100%;
+
+      .hero-text {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        color: $base-header-font-color;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+
+        .alaska {
+          width: 80px;
+          height: auto;
+          margin: 0 auto;
+          padding: 0;
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 30px;
+          letter-spacing: 6px;
+          font-family: $heading-font-family;
+        }
+
+        h1 {
+          font-size: 105px;
+          line-height: 105px;
+          font-family: 'freight-big-pro', serif;
+          font-weight: bold;
+          text-align: center;
+          text-transform: uppercase;
+          margin: 0;
+
+          &.heading-sep {
+            line-height: 1px;
+          }
+        }
+    }
+  }
+
+  #hero-scrolldown {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: $base-header-font-color;
+    align-items: flex-end;
+    margin-top: 5em;
+    width: 100%;
     text-align: center;
-    text-transform: uppercase;
 
-    .alaska {
-      width: 80px;
-      height: auto;
-      margin: 0 auto;
-      padding: 0;
+    .viewmore-down {
+      display: inline-block;
+      background: url(../img/btn-viewmoredown.png) bottom center no-repeat;
+      span {
+        display: inline-block;
+        line-height: 60px;
+        padding: 0px 30px;
+        background: $base-font-color-hover;
+        font-size: 14px;
+        color: $base-header-font-color;
+        text-transform: uppercase;
+        font-family: $heading-font-family;
+        letter-spacing: 2px;
+      }
     }
-
-    p {
-      font-size: 18px;
-      line-height: 30px;
-      letter-spacing: 6px;
-      font-family: $heading-font-family;
-    }
-    h1 {
-      font-size: 105px;
-      line-height: 105px;
-      font-family: 'freight-big-pro', serif;
-      font-weight: bold;
-      text-align: center;
-      text-transform: uppercase;
-    }
-    .alaska-text {
-      padding: 0;
-      margin: 0;
-      width: 85%;
-      height: auto;
-    }
-  }
-  .heading-sep {
-      margin: 0 auto;
-      padding: 0;
-      background: $white;
-      width: 250px;
   }
 }
-
-/* NAVIGATION */
-// .navigation-wrapper {
-//   display: flex;
-//   flex-direction: row;
-//   nav {
-//     width: 100%;
-//     height: 100%;
-//     margin: 0 auto;
-//     background: black;
-//     padding: 0;
-//     ul {
-//       list-style: none;
-//       text-align: center;
-//       li {
-//         display: inline-block;
-//         a {
-//           display: inline-block;
-//           color: $base-header-font-color;
-//           font-family: $heading-font-family;
-//           line-height: 50px;
-//           padding: 0px 12px;
-//           font-size: 15px;
-//           text-decoration: none;
-//           text-transform: uppercase;
-//           transition: all 1s;
-//           &:after, &:before {
-//             transition: all 1s;
-//           }
-//           &:hover {
-//             color: $orange;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
