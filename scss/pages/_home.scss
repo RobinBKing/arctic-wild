@@ -1,26 +1,38 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-.main {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
+// .main {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+// }
   .trip-grid {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: flex-start;
+  }
     .trip-row {
       display: flex;
+      justify-content: flex-start;
       flex-direction: row;
+      flex-wrap: nowrap;
+      height: 420px;
+      clear: both;
+}
       .set-background {
-        position: relative;
-        height: 450px;
         background-size: cover;
+        position: relative;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        height: auto;
       }
+
       .trip-hf {
         width: 50%;
-      }
+    }
 
       .trip-qt {
         width: 25%;
@@ -35,7 +47,7 @@
       #backpacking {
         background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg");
       }
-      #rafting {
+      #canoe {
         background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg");
       }
       #photo {
@@ -44,6 +56,3 @@
       #custom {
         background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg");
       }
-    }
-  }
-}
