@@ -4,7 +4,7 @@
 #hero {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: nowrap;
   width: 100%;
@@ -18,7 +18,8 @@
     flex-direction: row;
     align-items: center;
     width: 90%;
-    margin: 2em;
+    margin: 4em;
+    // padding: 2em;
     @include clearfix;
     @include outer-container;
   }
@@ -30,13 +31,31 @@
     width: 240px;
     height: 50px;
 
+    @include media ($horizontal-bar-mode) {
+        height: 50px;
+        vertical-align: top;
+    }
+
+    &:focus,
+    &:hover {
+      color: $base-font-color-hover;
+    }
+
     .logo-img {
-      max-width: 8vh;
+      width: 40px;
+
+      @include media ($horizontal-bar-mode) {
+          width: 50px;
+        }
     }
 
     .logo-text {
-      width: 25vh;
+      width: 144px;
       height: auto;
+
+      @include media ($horizontal-bar-mode) {
+          width: 180px;
+        }
     }
   }
 
@@ -98,10 +117,12 @@
 
     @include media ($horizontal-bar-mode) {
       background: transparent;
-      display: inline;
-      line-height: $navigation-height;
-      text-decoration: none;
+      display: inline-block;
+      line-height: 50px;
+      padding: 0px 12px;
+      // text-decoration: none;
       width: auto;
+      font-size: 15px;
     }
 
     a {
@@ -268,6 +289,12 @@
           line-height: 30px;
           letter-spacing: 6px;
           font-family: $heading-font-family;
+
+          @include media($horizontal-bar-mode) {
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 6px;
+          }
         }
 
         h1 {
@@ -279,6 +306,11 @@
           text-transform: uppercase;
           margin: 0;
 
+          @include media($horizontal-bar-mode) {
+            font-size: 120px;
+            line-height: 120px;
+          }
+
           &.heading-sep {
             line-height: 1px;
           }
@@ -287,15 +319,21 @@
   }
 
   #hero-scrolldown {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 5em;
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-end;
+    // margin-top: 6em;
+    // width: 100%;
+    // text-align: center;
     width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
     text-align: center;
 
     .viewmore-down {
       display: inline-block;
+      padding-bottom: 8px;
       background: url(../img/btn-viewmoredown.png) bottom center no-repeat;
       span {
         display: inline-block;
@@ -332,38 +370,26 @@
     z-index: 9999;
   }
 
-  // .logo {
-  //   float: left;
-  //   max-height: $navigation-height;
-  //   padding-left: $navigation-padding;
-  //   padding-right: 2em;
-  //
-  //   img {
-  //     max-height: $navigation-height;
-  //     padding: 0.8em 0;
-  //   }
-  // }
-
 // Mobile view
-//   .navigation-menu-button {
-//     color: $base-header-font-color;
-//     display: block;
-//     float: right;
-//     line-height: $navigation-height;
-//     margin: 0;
-//     padding-right: 1em;
-//     text-decoration: none;
-//     text-transform: uppercase;
-//
-//     @include media ($horizontal-bar-mode) {
-//       display: none;
-//     }
-//
-//     &:focus,
-//     &:hover {
-//       color: $base-font-color-hover;
-//     }
-//   }
+  .navigation-menu-button {
+    color: $base-header-font-color;
+    display: block;
+    float: right;
+    line-height: $navigation-height;
+    margin: 0;
+    padding-right: 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @include media ($horizontal-bar-mode) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: $base-font-color-hover;
+    }
+  }
 
 // Nav menu
   nav {
@@ -385,10 +411,6 @@
     overflow: visible;
     padding: 0;
     width: 100%;
-
-    &.show {
-      display: block;
-    }
 
     @include media ($horizontal-bar-mode) {
       display: inline;

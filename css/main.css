@@ -596,7 +596,7 @@ picture {
     flex-direction: row;
     align-items: center;
     width: 90%;
-    margin: 2em;
+    margin: 4em;
     max-width: 68em;
     margin-left: auto;
     margin-right: auto; }
@@ -614,16 +614,28 @@ picture {
     justify-content: flex-start;
     width: 240px;
     height: 50px; }
+    @media screen and (min-width: 960px) {
+      #hero .logo {
+        height: 50px;
+        vertical-align: top; } }
+    #hero .logo:focus, #hero .logo:hover {
+      color: #dc7725; }
     #hero .logo .logo-img {
-      max-width: 8vh; }
+      width: 40px; }
+      @media screen and (min-width: 960px) {
+        #hero .logo .logo-img {
+          width: 50px; } }
     #hero .logo .logo-text {
-      width: 25vh;
+      width: 144px;
       height: auto; }
+      @media screen and (min-width: 960px) {
+        #hero .logo .logo-text {
+          width: 180px; } }
   #hero .navigation-menu-button {
     width: 30px;
     height: auto;
     display: block; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero .navigation-menu-button {
         display: none; } }
     #hero .navigation-menu-button:focus, #hero .navigation-menu-button:hover {
@@ -633,7 +645,7 @@ picture {
     flex-direction: row;
     justify-content: flex-end;
     padding: 0; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero nav {
         justify-content: flex-end; } }
   #hero ul.navigation-menu {
@@ -645,7 +657,7 @@ picture {
     width: 100%; }
     #hero ul.navigation-menu.show {
       display: block; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero ul.navigation-menu {
         display: inline;
         margin: 0;
@@ -657,20 +669,21 @@ picture {
     padding-right: 0.8em;
     text-align: right;
     width: 100%; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero ul li.nav-link {
         background: transparent;
-        display: inline;
-        line-height: 80px;
-        text-decoration: none;
-        width: auto; } }
+        display: inline-block;
+        line-height: 50px;
+        padding: 0px 12px;
+        width: auto;
+        font-size: 15px; } }
     #hero ul li.nav-link a {
       color: #ffffff;
       display: inline-block;
       text-decoration: none;
       font-size: 13px;
       font-family: "Fjalla One", sans-serif; }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 960px) {
         #hero ul li.nav-link a {
           padding-right: 1em; } }
       #hero ul li.nav-link a:focus, #hero ul li.nav-link a:hover {
@@ -680,7 +693,7 @@ picture {
     padding-bottom: 3px; }
   #hero li.more.nav-link {
     padding-right: 0; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero li.more.nav-link {
         padding-right: 1em; } }
     #hero li.more.nav-link > ul > li:first-child a {
@@ -705,7 +718,7 @@ picture {
     #hero li.more > a {
       padding-right: 1.6em;
       position: relative; }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 960px) {
         #hero li.more > a {
           margin-right: 1em; } }
       #hero li.more > a:after {
@@ -715,26 +728,26 @@ picture {
         right: 0.5em; }
     #hero li.more:focus > .submenu, #hero li.more:hover > .submenu {
       display: block; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero li.more {
         padding-right: 0.8em;
         position: relative; } }
   #hero ul.submenu {
     display: none;
     padding-left: 0; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #hero ul.submenu .submenu {
         left: 5.8em;
         top: 0; } }
     #hero ul.submenu li {
       display: block;
       padding-right: 0; }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 960px) {
         #hero ul.submenu li {
           line-height: 61.53846px; }
           #hero ul.submenu li:first-child > a {
@@ -749,7 +762,7 @@ picture {
         display: inline-block;
         text-align: right;
         width: 100%; }
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 960px) {
           #hero ul.submenu li a {
             background-color: #343433;
             padding-left: 1em;
@@ -777,6 +790,11 @@ picture {
         line-height: 30px;
         letter-spacing: 6px;
         font-family: "Fjalla One", sans-serif; }
+        @media screen and (min-width: 960px) {
+          #hero #hero-text-hold .hero-text p {
+            font-size: 20px;
+            line-height: 30px;
+            letter-spacing: 6px; } }
       #hero #hero-text-hold .hero-text h1 {
         font-size: 105px;
         line-height: 105px;
@@ -785,17 +803,21 @@ picture {
         text-align: center;
         text-transform: uppercase;
         margin: 0; }
+        @media screen and (min-width: 960px) {
+          #hero #hero-text-hold .hero-text h1 {
+            font-size: 120px;
+            line-height: 120px; } }
         #hero #hero-text-hold .hero-text h1.heading-sep {
           line-height: 1px; }
   #hero #hero-scrolldown {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-top: 5em;
     width: 100%;
+    position: absolute;
+    bottom: 10%;
+    left: 0px;
     text-align: center; }
     #hero #hero-scrolldown .viewmore-down {
       display: inline-block;
+      padding-bottom: 8px;
       background: url(../img/btn-viewmoredown.png) bottom center no-repeat; }
       #hero #hero-scrolldown .viewmore-down span {
         display: inline-block;
@@ -833,13 +855,27 @@ picture {
       clear: both;
       content: "";
       display: table; }
+  #navigation-category .navigation-menu-button {
+    color: #ffffff;
+    display: block;
+    float: right;
+    line-height: 80px;
+    margin: 0;
+    padding-right: 1em;
+    text-decoration: none;
+    text-transform: uppercase; }
+    @media screen and (min-width: 960px) {
+      #navigation-category .navigation-menu-button {
+        display: none; } }
+    #navigation-category .navigation-menu-button:focus, #navigation-category .navigation-menu-button:hover {
+      color: #dc7725; }
   #navigation-category nav {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     padding: 0;
     min-height: 80px; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category nav {
         justify-content: flex-end; } }
   #navigation-category ul.navigation-menu {
@@ -849,9 +885,7 @@ picture {
     overflow: visible;
     padding: 0;
     width: 100%; }
-    #navigation-category ul.navigation-menu.show {
-      display: block; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category ul.navigation-menu {
         display: inline;
         margin: 0;
@@ -864,7 +898,7 @@ picture {
     padding-right: 0.8em;
     text-align: right;
     width: 100%; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category ul li.nav-link {
         background: transparent;
         display: inline;
@@ -875,7 +909,7 @@ picture {
       color: #ffffff;
       display: inline-block;
       text-decoration: none; }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 960px) {
         #navigation-category ul li.nav-link a {
           padding-right: 1em; } }
       #navigation-category ul li.nav-link a:focus, #navigation-category ul li.nav-link a:hover {
@@ -885,7 +919,7 @@ picture {
     padding-bottom: 3px; }
   #navigation-category li.more.nav-link {
     padding-right: 0; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category li.more.nav-link {
         padding-right: 1em; } }
     #navigation-category li.more.nav-link > ul > li:first-child a {
@@ -910,7 +944,7 @@ picture {
     #navigation-category li.more > a {
       padding-right: 1.6em;
       position: relative; }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 960px) {
         #navigation-category li.more > a {
           margin-right: 1em; } }
       #navigation-category li.more > a:after {
@@ -920,26 +954,26 @@ picture {
         right: 0.5em; }
     #navigation-category li.more:focus > .submenu, #navigation-category li.more:hover > .submenu {
       display: block; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category li.more {
         padding-right: 0.8em;
         position: relative; } }
   #navigation-category ul.submenu {
     display: none;
     padding-left: 0; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category ul.submenu .submenu {
         left: 5.8em;
         top: 0; } }
     #navigation-category ul.submenu li {
       display: block;
       padding-right: 0; }
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 960px) {
         #navigation-category ul.submenu li {
           line-height: 61.53846px; }
           #navigation-category ul.submenu li:first-child > a {
@@ -954,7 +988,7 @@ picture {
         display: inline-block;
         text-align: right;
         width: 100%; }
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 960px) {
           #navigation-category ul.submenu li a {
             background-color: #343433;
             padding-left: 1em;
@@ -965,7 +999,7 @@ picture {
     clear: both;
     display: block;
     height: 80px; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category .navigation-tools {
         background: transparent;
         clear: none;
@@ -986,7 +1020,7 @@ picture {
         margin: 0;
         padding: 0.5em 0.8em;
         width: 100%; }
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 960px) {
           #navigation-category .search-bar form input[type=search] {
             width: 100%; } }
       #navigation-category .search-bar form button[type=submit] {
@@ -1003,7 +1037,7 @@ picture {
           height: 12px;
           opacity: 0.7;
           padding: 1px; }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 960px) {
       #navigation-category .search-bar {
         display: inline-block;
         position: relative;

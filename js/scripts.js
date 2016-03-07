@@ -4,7 +4,6 @@
 $(document).ready(function() {
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-main-menu').removeClass("show");
-  // $('#js-category-menu').removeClass("show");
 
   menuToggle.on('click', function(e) {
     e.preventDefault();
