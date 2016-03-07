@@ -587,9 +587,12 @@ picture {
   align-items: flex-start;
   flex-wrap: nowrap;
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background: url(../img/hero-slide1.jpg) top center no-repeat;
   background-size: cover; }
+  @media screen and (min-width: 960px) {
+    #hero {
+      height: 100vh; } }
   #hero .navigation-wrapper {
     display: flex;
     justify-content: space-between;
@@ -787,8 +790,8 @@ picture {
         padding: 0; }
       #hero #hero-text-hold .hero-text p {
         font-size: 18px;
-        line-height: 30px;
-        letter-spacing: 6px;
+        line-height: 26px;
+        letter-spacing: 4px;
         font-family: "Fjalla One", sans-serif; }
         @media screen and (min-width: 960px) {
           #hero #hero-text-hold .hero-text p {
@@ -796,8 +799,8 @@ picture {
             line-height: 30px;
             letter-spacing: 6px; } }
       #hero #hero-text-hold .hero-text h1 {
-        font-size: 105px;
-        line-height: 105px;
+        font-size: 80px;
+        line-height: 80px;
         font-family: 'freight-big-pro', serif;
         font-weight: bold;
         text-align: center;
@@ -812,9 +815,12 @@ picture {
   #hero #hero-scrolldown {
     width: 100%;
     position: absolute;
-    bottom: 10%;
+    bottom: 40%;
     left: 0px;
     text-align: center; }
+    @media screen and (min-width: 960px) {
+      #hero #hero-scrolldown {
+        bottom: 10%; } }
     #hero #hero-scrolldown .viewmore-down {
       display: inline-block;
       padding-bottom: 8px;
@@ -1097,9 +1103,15 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       transform: scale(1.25, 1.25);
       transition: transform 0.3s, opacity 0.3s; }
   .trip-row .trip-hf {
-    flex-grow: 2; }
+    width: 100%; }
+    @media screen and (min-width: 960px) {
+      .trip-row .trip-hf {
+        width: 50%; } }
   .trip-row .trip-qt {
-    flex-grow: 1; }
+    width: 50%; }
+    @media screen and (min-width: 960px) {
+      .trip-row .trip-qt {
+        width: 25%; } }
   .trip-row #rafting {
     background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg"); }
   .trip-row #basecamp {

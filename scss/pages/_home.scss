@@ -29,11 +29,17 @@
      }
 
       .trip-hf {
-        flex-grow: 2;
+        width: 100%;
+        @include media ($horizontal-bar-mode) {
+          width: 50%
+        }
       }
 
       .trip-qt {
-        flex-grow: 1;
+        width: 50%;
+        @include media ($horizontal-bar-mode) {
+          width: 25%
+        }
       }
 
       #rafting {
