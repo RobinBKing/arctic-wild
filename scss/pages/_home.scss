@@ -1,41 +1,39 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
-// .main {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-// }
-  .trip-grid {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.main {
+  padding-top: $navigation-height;
+}
+
     .trip-row {
       display: flex;
       justify-content: flex-start;
       flex-direction: row;
       flex-wrap: nowrap;
-      height: 420px;
-      clear: both;
-}
+      min-height: 420px;
+      @include clearfix;
+
       .set-background {
         background-size: cover;
         position: relative;
         background-position: center;
         background-repeat: no-repeat;
         overflow: hidden;
-        height: auto;
-      }
+
+        &:hover {
+          .trip-icon img {
+            transform: scale(1.25, 1.25);
+            transition: transform 0.3s, opacity 0.3s;
+          }
+        }
+     }
 
       .trip-hf {
-        width: 50%;
-    }
+        flex-grow: 2;
+      }
 
       .trip-qt {
-        width: 25%;
+        flex-grow: 1;
       }
 
       #rafting {
@@ -56,3 +54,38 @@
       #custom {
         background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg");
       }
+
+        .trip-icon {
+          width: 100%;
+          position: absolute;
+          top: 38%;
+          left: 0px;
+          text-align: center;
+          pointer-events: none;
+
+            & img {
+              display: inline-block;
+              width: 90px;
+              height: 90px;
+              padding: 25px;
+              background: transparentize($black, 0.6);
+              border-radius: 100%;
+          }
+        }
+
+        .trip-text {
+          position: absolute;
+          left: 40px;
+          bottom: 40px;
+          color: $base-header-font-color;
+          font-family: $heading-font-family;
+          font-size: 22px;
+          pointer-events: none;
+         .trip-sep {
+            background: #dc7725;
+            height: 5px;
+            width: 40px;
+            margin-bottom: 15px;
+          }
+        }
+    }

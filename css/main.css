@@ -652,7 +652,7 @@ picture {
         padding: 0; } }
   #hero ul li.nav-link {
     display: block;
-    line-height: 60px;
+    line-height: 80px;
     overflow: hidden;
     padding-right: 0.8em;
     text-align: right;
@@ -661,7 +661,7 @@ picture {
       #hero ul li.nav-link {
         background: transparent;
         display: inline;
-        line-height: 60px;
+        line-height: 80px;
         text-decoration: none;
         width: auto; } }
     #hero ul li.nav-link a {
@@ -736,7 +736,7 @@ picture {
       padding-right: 0; }
       @media screen and (min-width: 900px) {
         #hero ul.submenu li {
-          line-height: 46.15385px; }
+          line-height: 61.53846px; }
           #hero ul.submenu li:first-child > a {
             border-top-left-radius: 3px;
             border-top-right-radius: 3px; }
@@ -811,7 +811,8 @@ picture {
 #navigation-category {
   background-color: #343433;
   border-bottom: 1px solid #1a1a1a;
-  min-height: 60px;
+  box-shadow: 0px 1px 2px;
+  min-height: 80px;
   width: 100%; }
   #navigation-category .navigation-wrapper {
     display: flex;
@@ -837,7 +838,7 @@ picture {
     flex-direction: row;
     justify-content: flex-end;
     padding: 0;
-    min-height: 60px; }
+    min-height: 80px; }
     @media screen and (min-width: 900px) {
       #navigation-category nav {
         justify-content: flex-end; } }
@@ -858,7 +859,7 @@ picture {
   #navigation-category ul li.nav-link {
     background: #343433;
     display: block;
-    line-height: 60px;
+    line-height: 80px;
     overflow: hidden;
     padding-right: 0.8em;
     text-align: right;
@@ -867,7 +868,7 @@ picture {
       #navigation-category ul li.nav-link {
         background: transparent;
         display: inline;
-        line-height: 60px;
+        line-height: 80px;
         text-decoration: none;
         width: auto; } }
     #navigation-category ul li.nav-link a {
@@ -940,7 +941,7 @@ picture {
       padding-right: 0; }
       @media screen and (min-width: 900px) {
         #navigation-category ul.submenu li {
-          line-height: 46.15385px; }
+          line-height: 61.53846px; }
           #navigation-category ul.submenu li:first-child > a {
             border-top-left-radius: 3px;
             border-top-right-radius: 3px; }
@@ -963,7 +964,7 @@ picture {
     background: #505050;
     clear: both;
     display: block;
-    height: 60px; }
+    height: 80px; }
     @media screen and (min-width: 900px) {
       #navigation-category .navigation-tools {
         background: transparent;
@@ -1039,50 +1040,70 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
     button:disabled:hover, input[type="button"]:disabled:hover, input[type="reset"]:disabled:hover, input[type="submit"]:disabled:hover {
       background-color: #1565c0; }
 
-.trip-grid {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start; }
+.main {
+  padding-top: 80px; }
 
 .trip-row {
   display: flex;
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: nowrap;
-  height: 420px;
-  clear: both; }
-
-.set-background {
-  background-size: cover;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  height: auto; }
-
-.trip-hf {
-  width: 50%; }
-
-.trip-qt {
-  width: 25%; }
-
-#rafting {
-  background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg"); }
-
-#basecamp {
-  background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg"); }
-
-#backpacking {
-  background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg"); }
-
-#canoe {
-  background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg"); }
-
-#photo {
-  background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg"); }
-
-#custom {
-  background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg"); }
+  min-height: 420px; }
+  .trip-row::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .trip-row .set-background {
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden; }
+    .trip-row .set-background:hover .trip-icon img {
+      transform: scale(1.25, 1.25);
+      transition: transform 0.3s, opacity 0.3s; }
+  .trip-row .trip-hf {
+    flex-grow: 2; }
+  .trip-row .trip-qt {
+    flex-grow: 1; }
+  .trip-row #rafting {
+    background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-raft.jpg"); }
+  .trip-row #basecamp {
+    background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-basecamp.jpg"); }
+  .trip-row #backpacking {
+    background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-backpacking.jpg"); }
+  .trip-row #canoe {
+    background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-canoe.jpg"); }
+  .trip-row #photo {
+    background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-photo.jpg"); }
+  .trip-row #custom {
+    background-image: url("http://arcticwild.com/wp-content/themes/arcticwild/assets/img/trips/home-custom.jpg"); }
+  .trip-row .trip-icon {
+    width: 100%;
+    position: absolute;
+    top: 38%;
+    left: 0px;
+    text-align: center;
+    pointer-events: none; }
+    .trip-row .trip-icon img {
+      display: inline-block;
+      width: 90px;
+      height: 90px;
+      padding: 25px;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 100%; }
+  .trip-row .trip-text {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    color: #ffffff;
+    font-family: "Fjalla One", sans-serif;
+    font-size: 22px;
+    pointer-events: none; }
+    .trip-row .trip-text .trip-sep {
+      background: #dc7725;
+      height: 5px;
+      width: 40px;
+      margin-bottom: 15px; }
 
 /*# sourceMappingURL=main.css.map */

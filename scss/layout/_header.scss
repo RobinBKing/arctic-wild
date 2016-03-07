@@ -316,6 +316,7 @@
 #navigation-category {
   background-color: $base-header-background-color;
   border-bottom: 1px solid darken($base-header-background-color, 10);
+  box-shadow: 0px 1px 2px;
   min-height: $navigation-height;
   width: 100%;
 
